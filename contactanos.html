@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .header {
+            background: #ca7953;
+        }
+
+        .navbar {
+            justify-content: center;
+        }
+
+        .navbar-brand img {
+            width: 60px;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar-nav .nav-link {
+            color: #000;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path stroke="%23333" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/></svg>') no-repeat center;
+            background-size: contain;
+        }
+
+        .form {
+            margin-top: 20px;
+        }
+
+        .small-text {
+            font-size: 0.8rem;
+        }
+
+        .small-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container navbar navbar-expand-lg navbar-light">
+          <a href="#" class="nav__logo navbar-brand">
+            <img src="img/img85.png" alt="Logo">
+            HUELLITAS FELICES
+          </a>
+    
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="index.html" class="nav__link nav-link">Inicio</a></li>
+              <li class="nav-item"><a href="acercade.html" class="nav__link nav-link">Acerca de</a></li>
+              <li class="nav-item"><a href="productos.php" class="nav__link nav-link" target="_blank">Tienda</a></li>
+              <li class="nav-item"><a href="contactanos.html" class="nav__link nav-link">Contacto</a></li>
+              <li class="nav-item"><a href="Servicios.html" class="nav__link nav-link">Servicios</a></li>
+              <li class="nav-item"><a href="login.html" class="nav__link nav-link">Regístrate</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form" action="mensajes.php" method="POST">
+                    <h2>Escríbenos</h2>
+                    <p>Estamos para atenderte, déjanos tus dudas y pronto nos contactaremos contigo.</p>
+                    <div class="form-group">
+                        <label for="nombre">Escribe tu Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Escribe tu Correo</label>
+                        <input type="email" id="correo" name="correo" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Escribe tu Mensaje</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <div class="text-center">
+                    <img src="img/img85.png" class="img-fluid mb-3" alt="">
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <div class="d-flex align-items-center mb-3 small-text">
+                        <img src="img/gps.svg" alt="" class="small-icon mr-2">
+                        <p>San Mateo Otzacatipan</p>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3 small-text">
+                        <img src="img/number.svg" alt="" class="small-icon mr-2">
+                        <p>7222984848</p>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3 small-text">
+                        <img src="img/email.svg" alt="" class="small-icon mr-2">
+                        <p><a href="mailto:huellitasfelices@gmail.com" class="text-decoration-none">huellitasfelices@gmail.com</a></p>
+                    </div>
+
+                    <div class="d-flex social-icons">
+                        <img src="img/fa.svg" alt="">
+                        <img src="img/tw.svg" alt="">
+                        <img src="img/ins.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

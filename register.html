@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            background: #ca7953;
+        }
+
+        .nav__logo img {
+            width: 60px;
+        }
+
+        .nav__link {
+            color: #000;
+            font-weight: bold;
+        }
+
+        .nav__link:hover {
+            color: #007bff;
+        }
+
+        .nav__toggle {
+            display: none;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f8f9fa;
+        }
+
+        .login-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-info-container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .login-info-container .title {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .social-login-element {
+            display: flex;
+            align-items: center;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .social-login-element img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .social-login-element span {
+            font-size: 0.9rem;
+        }
+
+        .inputs-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .input {
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        .image-container {
+            max-width: 500px;
+            height: auto;
+        }
+
+        .span {
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .span:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container navbar navbar-expand-lg navbar-light">
+          <a href="#" class="nav__logo navbar-brand">
+            <img src="img/img85.png" alt="Logo">
+            HUELLITAS FELICES
+          </a>
+    
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="index.html" class="nav__link nav-link">Inicio</a></li>
+              <li class="nav-item"><a href="acercade.html" class="nav__link nav-link">Acerca de</a></li>
+              <li class="nav-item"><a href="productos.php" class="nav__link nav-link" target="_blank">Tienda</a></li>
+              <li class="nav-item"><a href="contactanos.html" class="nav__link nav-link">Contacto</a></li>
+              <li class="nav-item"><a href="Servicios.html" class="nav__link nav-link">Servicios</a></li>
+              <li class="nav-item"><a href="login.html" class="nav__link nav-link">Regístrate</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+    <div class="login-container">
+        <div class="login-wrapper d-flex">
+            <div class="login-info-container">
+                <h1 class="title">Huellitas Felices</h1>
+                <div class="social-login">
+                    <div class="social-login-element">
+                        <img src="img/google.svg" alt="google-image">
+                        <span>Google</span>
+                    </div>
+                    <div class="social-login-element">
+                        <img src="img/facebook.png" alt="facebook-image">
+                        <span>Facebook</span>
+                    </div>
+                </div>
+                <p class="text-center">o</p>
+                <form class="inputs-container" action="register.php" method="POST" onsubmit="return validatePasswords()">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="ap" placeholder="Apellido Paterno" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="am" placeholder="Apellido Materno" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="date" name="fn" placeholder="Fecha de Nacimiento" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="email" name="email" placeholder="Correo" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" placeholder="Contraseña" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password1" placeholder="Confirma tu contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <p class="text-center mt-3">¿Ya tienes cuenta? <a href="login.html" class="span">Iniciar Sesión</a></p>
+                </form>
+            </div>
+            <img class="image-container d-none d-md-block ml-4" src="img/img85.png" alt="Huellitas Felices">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function validatePasswords() {
+            var password = document.querySelector('input[name="password"]').value;
+            var confirmPassword = document.querySelector('input[name="password1"]').value;
+
+            if (password !== confirmPassword) {
+                alert("Las contraseñas no coinciden. Por favor, verifica y vuelve a intentar.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
